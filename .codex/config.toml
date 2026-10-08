@@ -1,0 +1,6 @@
+# Repository-root sessions use the deployment contract in AGENTS.md.
+# Project-specific MCP configuration is created by `pharos new`.
+disable_response_storage = true
+
+[sandbox_workspace_write]
+network_access = true

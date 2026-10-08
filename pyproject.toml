@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pharos"
+version = "3.1.0"
+description = "Mathematical research orchestration with persistent fact graphs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Zeming Sun" }]
+keywords = ["mathematics", "proof-search", "multi-agent", "llm", "orchestration"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+# The core stores use the standard library; services use the extras below.
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/frenzymath/Pharos"
+Documentation = "https://github.com/frenzymath/Pharos/tree/main/docs"
+
+[project.scripts]
+pharos = "pharos.orchestration.cli:main"
+codex = "pharos.codex:main"
+
+[project.optional-dependencies]
+gateway = ["mcp"]
+verify = ["fastapi", "uvicorn", "pydantic"]
+render = ["markdown-it-py", "mdit-py-plugins"]
+dev = ["pytest", "mcp", "fastapi", "uvicorn", "pydantic", "openai",
+       "markdown-it-py", "mdit-py-plugins"]
+
+[tool.setuptools.packages.find]
+include = ["pharos*"]
+
+[tool.setuptools.package-data]
+pharos = ["**/*.css"]
+
+[tool.pytest.ini_options]
+# Exclude downloaded tools and their tests from collection.
+testpaths = ["pharos"]
+norecursedirs = ["runtime"]

@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1160" viewBox="0 0 1680 1160" role="img" aria-labelledby="title description">
+<title id="title">Pharos architecture</title>
+<desc id="description">A mathematician guides a project main agent, which assigns proof tasks to workers and requests advice from helpers. Worker submissions receive fresh verification; the gateway writes accepted facts and returns repair feedback on rejection. Shared memory and checkpoints support continued research, progress reports, and a paper workflow with section and whole-paper review.</desc>
+<rect width="1680" height="1160" fill="#ffffff"/>
+<rect width="1680" height="8" fill="#237c87"/>
+<text x="80" y="66" font-family="DejaVu Sans, Arial, sans-serif" font-size="44" font-weight="700" fill="#183348" text-anchor="start">Pharos</text>
+<text x="80" y="105" font-family="DejaVu Sans, Arial, sans-serif" font-size="23" font-weight="400" fill="#536978" text-anchor="start">Plan approaches, verify proofs, and carry results into reports and papers.</text>
+<rect x="80" y="155" width="320" height="110" rx="12" fill="#f4f8fa" stroke="#bdced6" stroke-width="1.7"/>
+<text x="240.0" y="194" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="600" fill="#183348" text-anchor="middle">Mathematician</text>
+<text x="240.0" y="225" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">Problem · expert guidance</text>
+<rect x="610" y="155" width="430" height="110" rx="12" fill="#e9f5f1" stroke="#bdced6" stroke-width="1.7"/>
+<text x="825.0" y="194" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="600" fill="#183348" text-anchor="middle">Main agent</text>
+<text x="825.0" y="225" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">High-level reasoning · route planning</text>
+<rect x="1280" y="155" width="320" height="110" rx="12" fill="#f4f8fa" stroke="#bdced6" stroke-width="1.7"/>
+<text x="1440.0" y="194" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="600" fill="#183348" text-anchor="middle">Helpers</text>
+<text x="1440.0" y="225" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">Surveys · digests · advice</text>
+<path d="M 405 190 H 604" fill="none" stroke="#237c87" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="604,190 589,183 589,197" fill="#237c87"/>
+<text x="503" y="178" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="400" fill="#536978" text-anchor="middle">instructions</text>
+<path d="M 605 235 H 406" fill="none" stroke="#237c87" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="406,235 421,242 421,228" fill="#237c87"/>
+<text x="503" y="258" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="400" fill="#536978" text-anchor="middle">dialogue</text>
+<path d="M 1045 190 H 1274" fill="none" stroke="#237c87" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1274,190 1259,183 1259,197" fill="#237c87"/>
+<text x="1160" y="178" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="400" fill="#536978" text-anchor="middle">questions</text>
+<path d="M 1275 235 H 1046" fill="none" stroke="#237c87" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1046,235 1061,242 1061,228" fill="#237c87"/>
+<text x="1160" y="258" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="400" fill="#536978" text-anchor="middle">summaries</text>
+<path d="M 825 270 V 354" fill="none" stroke="#237c87" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="825,354 832,339 818,339" fill="#237c87"/>
+<text x="847" y="319" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="500" fill="#183348" text-anchor="start">pharos assign · TASK.md</text>
+<rect x="80" y="360" width="760" height="190" rx="12" fill="#f8fbfc" stroke="#bdced6" stroke-width="1.7"/>
+<text x="104" y="392" font-family="DejaVu Sans, Arial, sans-serif" font-size="20" font-weight="600" fill="#237c87" text-anchor="start">WORKERS</text>
+<text x="282" y="392" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="start">Independent rounds · private working notes</text>
+<rect x="105" y="414" width="220" height="110" rx="12" fill="#f4f8fa" stroke="#bdced6" stroke-width="1.7"/>
+<text x="215.0" y="453" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="600" fill="#183348" text-anchor="middle">Worker 1</text>
+<text x="215.0" y="484" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">Proof search</text>
+<text x="215.0" y="510" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">TASK.md · memory</text>
+<rect x="350" y="414" width="220" height="110" rx="12" fill="#f4f8fa" stroke="#bdced6" stroke-width="1.7"/>
+<text x="460.0" y="453" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="600" fill="#183348" text-anchor="middle">Worker 2</text>
+<text x="460.0" y="484" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">Proof search</text>
+<text x="460.0" y="510" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">TASK.md · memory</text>
+<rect x="595" y="414" width="220" height="110" rx="12" fill="#f4f8fa" stroke="#bdced6" stroke-width="1.7"/>
+<text x="705.0" y="453" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="600" fill="#183348" text-anchor="middle">Worker N</text>
+<text x="705.0" y="484" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">Proof search</text>
+<text x="705.0" y="510" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">TASK.md · memory</text>
+<rect x="1100" y="390" width="500" height="145" rx="12" fill="#f4f8fa" stroke="#bdced6" stroke-width="1.7"/>
+<text x="1350.0" y="429" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="600" fill="#183348" text-anchor="middle">Verify service</text>
+<text x="1350.0" y="460" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">Fresh session for each proof</text>
+<text x="1350.0" y="486" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">Accept or return repair feedback</text>
+<path d="M 845 430 H 1094" fill="none" stroke="#237c87" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1094,430 1079,423 1079,437" fill="#237c87"/>
+<text x="970" y="415" font-family="DejaVu Sans, Arial, sans-serif" font-size="20" font-weight="400" fill="#536978" text-anchor="middle">fact_submit</text>
+<path d="M 1095 502 H 846" fill="none" stroke="#237c87" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="846,502 861,509 861,495" fill="#237c87"/>
+<text x="970" y="484" font-family="DejaVu Sans, Arial, sans-serif" font-size="20" font-weight="400" fill="#536978" text-anchor="middle">repair hints</text>
+<path d="M 1350 540 V 597 H 865 V 644" fill="none" stroke="#237c87" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="865,644 872,629 858,629" fill="#237c87"/>
+<text x="1099" y="582" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#237c87" text-anchor="middle">accept → gateway writes fact</text>
+<text x="1190" y="638" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="600" fill="#237c87" text-anchor="start">SHARED PROJECT STATE</text>
+<rect x="80" y="660" width="460" height="110" rx="12" fill="#f4f8fa" stroke="#bdced6" stroke-width="1.7"/>
+<text x="310.0" y="699" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="600" fill="#183348" text-anchor="middle">Global memory</text>
+<text x="310.0" y="730" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">Findings · dead ends · verdict traces</text>
+<rect x="635" y="660" width="460" height="110" rx="12" fill="#183348" stroke="#183348" stroke-width="1.7"/>
+<text x="865.0" y="699" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="600" fill="#ffffff" text-anchor="middle">Fact graph</text>
+<text x="865.0" y="730" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#dce8ec" text-anchor="middle">Accepted proofs · dependency DAG</text>
+<rect x="1190" y="660" width="410" height="110" rx="12" fill="#f4f8fa" stroke="#bdced6" stroke-width="1.7"/>
+<text x="1395.0" y="699" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="600" fill="#183348" text-anchor="middle">Research record</text>
+<text x="1395.0" y="730" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">Guidance · literature · checkpoints</text>
+<path d="M 284 556 V 654" fill="none" stroke="#237c87" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="284,654 291,639 277,639" fill="#237c87"/>
+<polygon points="284,556 277,571 291,571" fill="#237c87"/>
+<text x="304" y="595" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="400" fill="#536978" text-anchor="start">read / add</text>
+<path d="M 777 654 V 606 H 733 V 556" fill="none" stroke="#237c87" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="733,556 726,571 740,571" fill="#237c87"/>
+<text x="641" y="591" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="400" fill="#536978" text-anchor="middle">retrieve facts</text>
+<path d="M 865 775 V 900 H 195 V 920" fill="none" stroke="#237c87" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="195,920 202,905 188,905" fill="#237c87"/>
+<text x="892" y="819" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="400" fill="#536978" text-anchor="start">verified target</text>
+<path d="M 1395 775 V 837 H 1235 V 986 H 1264" fill="none" stroke="#237c87" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1264,986 1249,979 1249,993" fill="#237c87"/>
+<text x="1415" y="819" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="400" fill="#536978" text-anchor="start">checkpoint</text>
+<text x="80" y="882" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="600" fill="#237c87" text-anchor="start">PAPER · MAIN AGENT COORDINATES</text>
+<text x="1270" y="882" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="600" fill="#237c87" text-anchor="start">PROGRESS · ANY TIME</text>
+<rect x="80" y="926" width="230" height="125" rx="12" fill="#f4f8fa" stroke="#bdced6" stroke-width="1.7"/>
+<text x="195.0" y="965" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="600" fill="#183348" text-anchor="middle">Outline</text>
+<text x="195.0" y="996" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">Verified target</text>
+<text x="195.0" y="1022" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">OUTLINE.tex</text>
+<rect x="370" y="926" width="350" height="125" rx="12" fill="#f4f8fa" stroke="#bdced6" stroke-width="1.7"/>
+<text x="545.0" y="965" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="600" fill="#183348" text-anchor="middle">Section loops</text>
+<text x="545.0" y="996" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">Writer ⇄ section verifier</text>
+<text x="545.0" y="1022" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">Resume · revise until pass</text>
+<rect x="780" y="926" width="240" height="125" rx="12" fill="#f4f8fa" stroke="#bdced6" stroke-width="1.7"/>
+<text x="900.0" y="965" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="600" fill="#183348" text-anchor="middle">Paper verifier</text>
+<text x="900.0" y="996" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">Whole-paper review</text>
+<text x="900.0" y="1022" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">Polish after review</text>
+<rect x="1080" y="926" width="120" height="125" rx="12" fill="#f4f8fa" stroke="#bdced6" stroke-width="1.7"/>
+<text x="1140.0" y="965" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="600" fill="#183348" text-anchor="middle">PDF</text>
+<text x="1140.0" y="996" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">Build</text>
+<rect x="1270" y="926" width="330" height="125" rx="12" fill="#f4f8fa" stroke="#bdced6" stroke-width="1.7"/>
+<text x="1435.0" y="965" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="600" fill="#183348" text-anchor="middle">Reporter</text>
+<text x="1435.0" y="996" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">Checkpoint · facts</text>
+<text x="1435.0" y="1022" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="middle">Progress report · PDF</text>
+<path d="M 315 986 H 364" fill="none" stroke="#237c87" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="364,986 349,979 349,993" fill="#237c87"/>
+<text x="341" y="969" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#536978" text-anchor="middle">assign</text>
+<path d="M 725 986 H 774" fill="none" stroke="#237c87" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="774,986 759,979 759,993" fill="#237c87"/>
+<text x="750" y="969" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#536978" text-anchor="middle">pass</text>
+<path d="M 1025 986 H 1074" fill="none" stroke="#237c87" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1074,986 1059,979 1059,993" fill="#237c87"/>
+<text x="80" y="1110" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="400" fill="#536978" text-anchor="start">MCP roles govern store tools; model verification is not a formal proof certificate.</text>
+<text x="1600" y="1110" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="600" fill="#237c87" text-anchor="end">PHAROS</text>
+</svg>

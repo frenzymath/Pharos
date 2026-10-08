@@ -1,0 +1,26 @@
+/* pharos render — the human-report typography: a plain research paper
+   (serif, A4, centered title, numbered sections, no abstract). */
+@page { size: A4; margin: 24mm 22mm; }
+body { font-family: "STIX Two Text", "Latin Modern Roman", Georgia,
+       "Times New Roman", serif; font-size: 11pt; line-height: 1.45;
+       text-align: justify; hyphens: auto; margin: 0; color: #111;
+       counter-reset: sec; }
+h1 { font-size: 16pt; text-align: center; font-weight: 600;
+     margin: 0 0 1.4em 0; line-height: 1.3; }
+h2 { font-size: 12pt; margin: 1.6em 0 0.6em; counter-increment: sec;
+     counter-reset: subsec; }
+h2::before { content: counter(sec) ".  "; }
+h3 { font-size: 11pt; margin: 1.2em 0 0.4em; counter-increment: subsec; }
+h3::before { content: counter(sec) "." counter(subsec) "  "; }
+p { margin: 0 0 0.5em; }
+table { border-collapse: collapse; margin: 0.8em auto; font-size: 10pt; }
+th, td { border: 0.5pt solid #444; padding: 3pt 7pt; text-align: left; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9.5pt;
+       background: #f4f4f4; padding: 0 2pt; }
+pre { background: #f7f7f7; border: 0.5pt solid #ddd; padding: 6pt 8pt;
+      overflow-x: hidden; white-space: pre-wrap; }
+pre code { background: none; }
+blockquote { margin: 0.6em 1.5em; color: #333; }
+.math-display { margin: 0.6em 0; text-align: center; }
+a { color: inherit; }
+hr { border: none; border-top: 0.5pt solid #999; margin: 1.5em 15%; }

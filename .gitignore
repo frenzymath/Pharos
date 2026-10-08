@@ -1,0 +1,49 @@
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Build and packaging artifacts
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Codex local execution state
+.codex/tmp/
+
+# Credentials and local config
+config/*.env
+!config/*.env.example
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_ed25519
+id_rsa
+
+# Runtime (provisioned by bootstrap; never committed)
+runtime/
+*.log
+.coverage
+.cov_*
+
+# verify fallback dirs — production keeps the verifier inside its project
+# (<project>/verifier/), these only appear under direct library use / tests
+pharos/verify/agent/
+pharos/verify/runs/

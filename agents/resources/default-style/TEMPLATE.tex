@@ -1,0 +1,260 @@
+%-----------------------------------------------------------------------
+% Pharos paper template — the default of the Pharos style package
+%
+% This file is the paper template of the default style shipped with Pharos:
+% plain `article`, Latin Modern with microtype, 1.08in margins, one theorem
+% counter per section, a table of contents, an appendix declaring the use of
+% generative AI, and a bibliography with alphabetic labels (manual, so the
+% build needs no biber). A project that provides its own `style/TEMPLATE.tex`
+% compiles through that file instead of this one.
+%
+% Placeholders. `pharos paper build` replaces `%%TITLE%%` and `%%SECTIONS%%`
+% on every non-comment line: the title placeholder by the project's name
+% wherever it is still present, the section placeholder by the list of
+% section inputs, one \input per line. `%%SECTIONS%%` must occur exactly
+% once, on a line of its own, not in a comment. Comment lines are left
+% alone, which is why the placeholders can be named here.
+%
+% The project copy. The first `pharos paper assign` copies this file — or the
+% project's `style/TEMPLATE.tex` — to `paper/src/template.tex`; the build
+% compiles that copy, never this file. The main agent edits the copy: the
+% project macros and the bibliography entries as the outline supplies them,
+% and at polish the title, the author block, the abstract, the
+% acknowledgements and the AI appendix. An operator may pre-edit the copy
+% before the paper work starts. Every `[...]` and every `%` guidance comment
+% in the body below is replaced or deleted at polish.
+%
+% Paper disclosure is on by default: the abstract sentence, system and team
+% acknowledgements, Rethlas reference, and AI appendix below. The operator
+% may explicitly modify or omit them for this paper; record the choice in
+% expert_guidance/INSTRUCTIONS.md and apply it to the project copy. Describe
+% contributions and verification from records, never by assumption. When
+% omitting a block, update its cross-references and bibliography; preserve
+% any computation details needed to reproduce the paper's results.
+%-----------------------------------------------------------------------
+
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{xcolor}
+\usepackage[margin=1.08in]{geometry}
+\usepackage{enumitem}
+%\usepackage{graphicx}              % figures
+%\usepackage[cmtip,all]{xy}         % commutative diagrams
+\usepackage[
+  colorlinks=true,
+  linkcolor=magenta,
+  citecolor=cyan,
+  urlcolor=magenta,
+  pdftitle={%%TITLE%%},
+  pdfauthor={}
+]{hyperref}
+
+\setlist[enumerate]{leftmargin=2.2em,itemsep=2pt,topsep=4pt}
+\setlist[itemize]{leftmargin=2em,itemsep=2pt,topsep=4pt}
+\allowdisplaybreaks
+\emergencystretch=2em
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{1}
+
+% One shared counter per section: Theorem 2.1, Definition 2.2, Remark 2.3, …
+% The trailing comment gives the label kind of each environment
+% (\label{thm:main}, \label{def:admissible-pair}, …).
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]            % label kind: thm
+\newtheorem{proposition}[theorem]{Proposition}    % label kind: prop
+\newtheorem{lemma}[theorem]{Lemma}                % label kind: lem
+\newtheorem{corollary}[theorem]{Corollary}        % label kind: cor
+\newtheorem{conjecture}[theorem]{Conjecture}      % label kind: conj
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}      % label kind: def
+\newtheorem{example}[theorem]{Example}            % label kind: ex
+\newtheorem{notation}[theorem]{Notation}          % label kind: not
+\newtheorem{construction}[theorem]{Construction}  % label kind: constr
+\newtheorem{setup}[theorem]{Set-up}               % label kind: setup
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}              % label kind: rem
+
+%-----------------------------------------------------------------------
+% Macros. Everything in this block is a suggestion and stays commented out.
+% The project's own notation — the macro block at the top of the outline —
+% is added HERE, in the project copy, and nowhere else: a section file is a
+% bare body and carries no preamble and no macro of its own.
+%-----------------------------------------------------------------------
+% house macros, for example:
+%\newcommand{\card}[1]{\lvert #1\rvert}
+%\newcommand{\set}[1]{\left\{#1\right\}}
+%\newcommand{\suchthat}{\,\middle|\,}
+% project macros, for example:
+%\newcommand{\F}{\mathbb F}
+%\newcommand{\rk}{\operatorname{rk}}
+
+%-----------------------------------------------------------------------
+% Top matter. The date is part of the author block; \date{} stays empty.
+%-----------------------------------------------------------------------
+\title{%%TITLE%%}
+\author{%
+  \begin{tabular}{cc}
+    Author One & Author Two\\
+    \href{mailto:one@example.edu}{\texttt{one@example.edu}}
+      & \href{mailto:two@example.edu}{\texttt{two@example.edu}}
+  \end{tabular}\\[1em]
+  {\normalsize\textit{Department, Institution}}\\[0.4em]
+  {\normalsize Month Year}
+}
+\date{}
+
+\begin{document}
+\maketitle
+%\noindent\textit{2020 Mathematics Subject Classification:} Primary ; Secondary .
+
+\begin{abstract}
+% What is proved, in two to four sentences a non-specialist in the subfield
+% can follow, then the mechanism in one sentence. The abstract ends with the
+% sentence below by default; apply the operator's disclosure choice.
+The main result of this paper was obtained using the Pharos system.
+\end{abstract}
+
+\tableofcontents
+
+%-----------------------------------------------------------------------
+% The sections, in order: the introduction first — the style file gives its
+% shape, and it closes with any retained acknowledgements — then the
+% technical sections. The build replaces the placeholder line below by one
+% \input per section, in sorted name order.
+%-----------------------------------------------------------------------
+%%SECTIONS%%
+
+%-----------------------------------------------------------------------
+% Acknowledgements — the introduction's unnumbered closing section. Carried
+% here by default; if retained, at polish move it to the END OF THE
+% INTRODUCTION and fill the placeholders. Three parts, kept apart, in this
+% order: funding · the people who verified or commented · the system.
+% Apply the operator's disclosure choice; use supplied funding and personal
+% thanks only. Remove the appendix pointer if that appendix is omitted.
+%-----------------------------------------------------------------------
+\section*{Acknowledgements}
+%The work was partially supported by ....
+
+%The authors would like to thank ... for their careful reading of the paper
+%and for many useful comments.
+
+The main result of this paper was obtained using the Pharos
+system, an automated mathematical reasoning system built on
+Rethlas~\cite{Ju+26}. The authors would like to thank the members of the
+Rethlas and Pharos team (namely Leheng Chen, Guoxiong Gao, Jiedong Jiang,
+Haocheng Ju, Jihao Liu, Shurui Liu, Zeming Sun, Yuefeng Wang, Bin Wu, Liang Xiao, and
+Bin Dong) for their contributions to the development of these systems. The
+details of the use of generative AI are documented in
+Appendix~\ref{app:ai} for transparency. The authors are fully responsible
+for the correctness of the paper.
+
+%-----------------------------------------------------------------------
+% Appendix A — the use of generative AI, enabled by default. If retained,
+% filled at polish from the project's own records, never from memory:
+% project.json, `pharos usage`,
+% the checkpoint that recorded the target as proved, PROBLEM.md,
+% expert_guidance/INSTRUCTIONS.md, computation/. Every [...] is replaced;
+% every % comment is guidance to delete. The first three subsections are
+% present by default; the subsections left as comments are optional.
+% Apply the operator's explicit changes or omissions. If omitted, remove
+% references to this appendix and any unused \appendix command. Keep needed
+% computation details in the body, another appendix, or a cited supplement.
+%-----------------------------------------------------------------------
+\appendix
+\section{Details of the use of generative AI}\label{app:ai}
+
+The results of this paper were obtained using Pharos, an
+automated mathematical reasoning system built on Rethlas~\cite{Ju+26}. For
+transparency we record the experiment in detail: how the system was run
+(\S\ref{app:ai-run}), the problem exactly as it was posed
+(\S\ref{app:ai-problem}), and the guidance the authors gave during the run
+(\S\ref{app:ai-guidance}).
+% When an optional subsection below is used, name it in the sentence above
+% as well: the computations behind the computation-backed steps
+% (\S\ref{app:ai-computations}), the discovery trajectory
+% (\S\ref{app:ai-trajectory}), how the results were verified
+% (\S\ref{app:ai-verification}), what the authors did
+% (\S\ref{app:ai-authors}).
+
+\subsection{How the system was run}\label{app:ai-run}
+% Base model and reasoning effort of the main agent, the workers and the
+% verifier — by default this is the only place a model is named; the
+% number of workers; the start date (project.json, created_at) and the
+% wall-clock time until the target was verified (`pharos usage`; the
+% checkpoint that recorded the target as proved); any comparison run, with
+% its outcome stated plainly.
+Pharos was run with base model \texttt{[model]} at reasoning effort
+\texttt{[effort]}, with [N] workers. The experiment started on [date], and
+the main results were verified after [duration].
+
+\subsection{The problem as posed}\label{app:ai-problem}
+% PROBLEM.md, verbatim. Never paraphrased, never shortened.
+\begin{quote}\itshape
+[the problem statement given to the system, verbatim]
+\end{quote}
+
+\subsection{Guidance given during the run}\label{app:ai-guidance}
+% Every instruction the authors gave while the system ran, dated, from
+% expert_guidance/INSTRUCTIONS.md — the hints, the routes closed by
+% instruction, the papers supplied — and what each led to. If there was
+% none, one sentence says so.
+[...]
+
+% \subsection{Computations}\label{app:ai-computations}
+% % Optional: only when the paper has a computation-backed step. One item per
+% % computation: what was computed, with which method (the algorithm, the
+% % software, the parameters) and the outcome — enough for a reader to redo
+% % it. The scripts live in computation/ and are never cited by path.
+% \begin{enumerate}[leftmargin=*]
+% \item\textbf{[What was computed.]} [The method.] [The outcome.]
+% \end{enumerate}
+%
+% \subsection{Discovery trajectory}\label{app:ai-trajectory}
+% % Reconstructed from the checkpoints and the shared memory: the literature
+% % phase and the initial reductions; the routes explored and what obstructed
+% % each, dead routes included; the key idea — where and when it appeared, and
+% % whether it came from a worker, a helper, the literature, or the authors'
+% % guidance; how the final argument was assembled.
+% \begin{enumerate}[leftmargin=*]
+% \item\textbf{Literature and initial reductions.} [...]
+% \item\textbf{Approaches and their obstructions.} [...]
+% \item\textbf{The key idea.} [...]
+% \item\textbf{Assembling the proof.} [...]
+% \end{enumerate}
+%
+% \subsection{Verification}\label{app:ai-verification}
+% % Every result entered the fact graph only after a cold-start verifier
+% % accepted its proof; the size of the verified graph and the depth of the
+% % final dependency chain; the rejections that mattered and how they were
+% % repaired; any human verification documented in the project's records.
+% [...]
+%
+% \subsection{What the authors did}\label{app:ai-authors}
+% % Describe only documented author contributions: posing the problem,
+% % guidance, reading, checking or rewriting; and which results turned out
+% % to be already known — stated honestly, with the reference.
+% [...]
+
+%-----------------------------------------------------------------------
+% Bibliography. Alphabetic labels ([EPW16], [BHM$^+$22]). The entries
+% collated by the outline's last section are merged here by the main agent
+% after the first `pharos paper assign` creates the project copy, and kept
+% in step with the outline, sorted by label; polish checks the list and adds what the
+% introduction cites.
+% Keep the default Rethlas reference unless the operator changes or omits
+% it; update its citations together and remove it only when none remain.
+%-----------------------------------------------------------------------
+\clearpage
+\begin{thebibliography}{99}
+
+\bibitem[Ju$^+$26]{Ju+26} H.~Ju, G.~Gao, J.~Jiang, B.~Wu, Z.~Sun, S.~Liu, L.~Chen, Y.~Wang, Y.~Wang, Z.~Wang, W.~He, P.~Wu, L.~Xiao, R.~Liu, B.~Dai, and B.~Dong, \textit{Automated Conjecture Resolution with Formal Verification}, arXiv:2604.03789.
+
+\end{thebibliography}
+
+\end{document}

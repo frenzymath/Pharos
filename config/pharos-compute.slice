@@ -1,0 +1,8 @@
+# Shared limits for pharos compute jobs. bootstrap.sh installs this unit
+# under ~/.config/systemd/user/.
+[Slice]
+MemoryMax=16G
+MemorySwapMax=0
+CPUQuota=400%
+CPUWeight=20
+TasksMax=256
