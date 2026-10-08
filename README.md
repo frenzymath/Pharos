@@ -39,6 +39,15 @@ for materials, progress reports, discussion, and papers.
 Verification is a language-model judgment, not a formal proof certificate;
 results intended for publication need human review.
 
+## Acknowledgements
+
+Pharos was developed and refined by Bin Dong, Guoxiong Gao, Jiedong Jiang,
+Shurui Liu, Zeming Sun, and Bin Wu.
+
+We thank Jihao Liu, Bohan Fang, Jingjun Han, Guchuan Li, Ruochuan Liu,
+Yujie Luo, Zhenfu Wang, and Yijun Yuan for their feedback and suggestions
+on Pharos.
+
 ## License and origins
 
 Pharos inherits the worker–verifier and fact-graph core from

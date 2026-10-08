@@ -76,11 +76,17 @@ The template copy carries an unnumbered `Acknowledgements` section after the
 sections. If retained, move it to the end of the introduction and fill it.
 Three parts, kept apart, in this order: funding; the people who verified or
 commented on the paper; the default system sentences the template carries
-(Pharos built on Rethlas, `\cite{Ju+26}`, the team thanked by name, the
-pointer to Appendix~`\ref{app:ai}`, the authors responsible for
-correctness). Apply the operator's changes or omissions, and remove the
-appendix pointer if that appendix is omitted. Funding and personal thanks
-use only supplied information; omit unfilled optional lines.
+(Pharos built on Rethlas, `\cite{Ju+26}`, the Pharos developers and feedback
+contributors thanked separately, the pointer to Appendix~`\ref{app:ai}`,
+the authors responsible for correctness). Apply the operator's changes or
+omissions, and remove the appendix pointer if that appendix is omitted.
+Funding and personal thanks use only supplied information; omit unfilled
+optional lines.
+
+Pharos's developers are Bin Dong, Guoxiong Gao, Jiedong Jiang, Shurui Liu,
+Zeming Sun, and Bin Wu, in that order. In the default acknowledgements,
+keep the template's separate thanks for feedback and suggestions after the
+developer thanks, preserving the name order within each group.
 
 ## Appendix A — the use of generative AI
 
